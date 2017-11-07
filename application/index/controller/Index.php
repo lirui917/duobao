@@ -15,6 +15,8 @@ class Index extends Common
         $system=Db::query($sql);
         if ($system){
             echo $this->get_msg('100',$system);
+        }else{
+            echo $this->get_msg('109','没有配置');
         }
 
     }
