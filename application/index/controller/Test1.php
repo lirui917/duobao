@@ -3,7 +3,7 @@ namespace app\index\controller;
 
 use think\Db;
 
-class Test extends Common
+class Test1 extends Common
 {
     public function index()
     {
@@ -21,6 +21,7 @@ class Test extends Common
 
     }
     public function add(){
+        echo "hello world";
         return 1223222;
     }
 }
