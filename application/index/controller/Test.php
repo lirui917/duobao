@@ -20,4 +20,7 @@ class Test extends Common
         }
 
     }
+    public function add(){
+        return 1223222;
+    }
 }
