@@ -14,7 +14,6 @@ class Common extends Controller
 {
     function __construct()
     {
-        header("Access-Control-Allow-Origin:*");
         parent::__construct();
         //校验token
         $this->check_token();
@@ -22,9 +21,9 @@ class Common extends Controller
 
     //校验token
     public function check_token(){
-        $appid=isset($_POST['appid'])?$_POST['appid']:'';
-        $str=isset($_POST['str'])?$_POST['str']:'';
-        $token=isset($_POST['token'])?strtolower($_POST['token']):'';
+        $appid=isset($_GET['appid'])?$_GET['appid']:'';
+        $str=isset($_GET['sign'])?$_GET['sign']:'';
+        $token=isset($_GET['token'])?strtolower($_GET['token']):'';
 
         if (empty($appid)||empty($str)){
             echo $this->get_msg('103','参数错误');exit;
@@ -43,7 +42,10 @@ class Common extends Controller
 
     //返回错误信息
     public function get_msg($error,$errormsg){
+        $callback=$_GET['callback'];
+
         $data=['error'=>$error,'errormsg'=>$errormsg];
-        return json_encode($data);
+        $json_str=json_encode($data);
+        echo $callback."(".$json_str.")";exit;
     }
 }
