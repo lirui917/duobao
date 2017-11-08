@@ -17,8 +17,7 @@ class Common extends Controller
         header("Access-Control-Allow-Origin:*");
         parent::__construct();
         //校验token
-        $this->get_msg('100',$_POST);
-//        $this->check_token();
+        $this->check_token();
     }
 
     //校验token
@@ -32,7 +31,7 @@ class Common extends Controller
         }
 
         if (!$token){
-            echo $this->get_msg('1032','未找到token');exit;
+            echo $this->get_msg('102','未找到token');exit;
         }
 
         $new_token=md5($appid.$str);
