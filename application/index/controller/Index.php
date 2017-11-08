@@ -14,9 +14,9 @@ class Index extends Common
 //        $system=Db::table('keywords')->find();
         $system=Db::query($sql);
         if ($system){
-            echo $this->get_msg('100',$system);
+            $this->get_msg('100',$system);
         }else{
-            echo $this->get_msg('109','没有配置');
+            $this->get_msg('109','没有配置');
         }
 
     }
