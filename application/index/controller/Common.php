@@ -25,6 +25,13 @@ class Common extends Controller
         $appid=isset($_GET['appid'])?$_GET['appid']:'';
         $str=isset($_GET['sign'])?$_GET['sign']:'';
         $token=isset($_GET['token'])?strtolower($_GET['token']):'';
+        $callback=isset($_GET['callback'])?strtolower($_GET['callback']):'';
+
+        //判断是否有回调参数
+        if (empty($callback)){
+            $data=['error'=>500,'errormsg'=>'非法请求'];
+            echo json_encode($data);exit;
+        }
         //判断appid str 是否为空
         if (empty($appid)||empty($str)){
             $this->get_msg('103','参数错误');
@@ -43,17 +50,10 @@ class Common extends Controller
 
     //返回错误信息
     public function get_msg($error,$errormsg){
-        //判断回调方法是否存在
-        if(isset($_GET['callback'])){
             $callback=$_GET['callback'];
             $data=['error'=>$error,'errormsg'=>$errormsg];
             $json_str=json_encode($data);
             echo $callback."(".$json_str.")";exit;
-        }else{
-            $data=['error'=>'500','errormsg'=>'非法请求'];
-            $json_str=json_encode($data);
-            echo $json_str;exit;
-        }
 
     }
 }
