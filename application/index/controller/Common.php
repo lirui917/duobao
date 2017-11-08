@@ -44,7 +44,7 @@ class Common extends Controller
     //返回错误信息
     public function get_msg($error,$errormsg){
         //判断回调方法是否存在
-        if(isset($callback)){
+        if(isset($_GET['callback'])){
             $callback=$_GET['callback'];
             $data=['error'=>$error,'errormsg'=>$errormsg];
             $json_str=json_encode($data);
