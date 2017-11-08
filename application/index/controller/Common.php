@@ -30,7 +30,7 @@ class Common extends Controller
         //判断是否有回调参数
         if (empty($callback)){
             $data=['error'=>500,'errormsg'=>'非法请求'];
-            echo json_encode($data);exit;
+            echo json_encode($data,JSON_UNESCAPED_UNICODE);exit;
         }
         //判断appid str 是否为空
         if (empty($appid)||empty($str)){
@@ -52,7 +52,7 @@ class Common extends Controller
     public function get_msg($error,$errormsg){
             $callback=$_GET['callback'];
             $data=['error'=>$error,'errormsg'=>$errormsg];
-            $json_str=json_encode($data);
+            $json_str=json_encode($data,JSON_UNESCAPED_UNICODE);
             echo $callback."(".$json_str.")";exit;
 
     }
