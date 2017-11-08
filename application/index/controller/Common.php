@@ -42,10 +42,13 @@ class Common extends Controller
 
     //返回错误信息
     public function get_msg($error,$errormsg){
-        $callback=$_GET['callback'];
 
-        $data=['error'=>$error,'errormsg'=>$errormsg];
-        $json_str=json_encode($data);
-        echo $callback."(".$json_str.")";exit;
+        if(isset($callback)){
+            $callback=$_GET['callback'];
+            $data=['error'=>$error,'errormsg'=>$errormsg];
+            $json_str=json_encode($data);
+            echo $callback."(".$json_str.")";exit;
+        }
+
     }
 }
