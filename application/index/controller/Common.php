@@ -1,9 +1,10 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: lxt
+ * User: 罗雄腾
  * Date: 2017/11/07
  * Time: 12:05
+ *
  */
 namespace app\index\controller;
 
@@ -41,7 +42,7 @@ class Common extends Controller
             $this->get_msg('102','未找到token');
         }
         //后台生成token
-        $new_token=md5($appid.$str);
+        $new_token=md5($appid.$str.'123');
         //判断是否与接收到token相同
         if ($token!=$new_token){
             $this->get_msg('102','token错误');
