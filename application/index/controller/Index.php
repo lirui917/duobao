@@ -11,8 +11,8 @@ class Index extends Common
     }
     public function geturl(){
         $sql="select * from ecs_keywords";
-//        $system=Db::table('keywords')->find();
-        $system=Db::query($sql);
+        $system=Db::name('keywords')->find();
+//        $system=Db::query($sql);
         if ($system){
             $this->get_msg('100',$system);
         }else{
