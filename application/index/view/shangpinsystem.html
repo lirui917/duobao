@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>商品系统</title>
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-touch-fullscreen" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="format-detection" content="address=no">
+		<link rel="stylesheet" type="text/css" href="css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery.gDialog.css"/>
+		<link rel="stylesheet" type="text/css" href="css/otherpagecontent.css"/>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+		<script src="js/hmt.js" type="text/javascript"></script>
+		<script src="js/swiper.min.js" type="text/javascript" ></script>
+		<!-- 引用控制层插件样式 -->
+		<link rel="stylesheet" href="picture-shangchuan/control/css/ph-zyUpload.css" type="text/css">
+		<!--<script src="http://www.lanrenzhijia.com/ajaxjs/jquery.min.js"></script>-->
+		<!-- 引用核心层插件 -->
+		<script src="picture-shangchuan/core/zyFile.js"></script>
+		<!-- 引用控制层插件 -->
+		<script src="picture-shangchuan/control/js/ph-zyUpload.js"></script>
+		<!-- 引用初始化JS -->
+		<script src="picture-shangchuan/core/ph-lanrenzhijia.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$(".bianjibtn").click(function(){
+					$(".fenleiul-p3").show();
+					$("#finishbtn").show();
+					$("#finish1").hide();
+				})
+				$("#finishbtn").click(function(){
+					$(this).hide();
+					$(".fenleiul-p3").hide();
+//					$("#finishbtn").hide();
+					$("#finish1").show();
+				})
+				$(".addul").click(function(){
+					$(".jia-add").show();
+				});
+			})
+		</script>
+	</head>
+	<body>
+		<header class="hasManyCity hasManyCitytwo" id="header">
+			<a href="javascript:history.go(-1)" class="fl fanhui"><i class="iconfont icon-fanhui"></i></a>
+			<div class="header-tit">
+				商品系统
+			</div>	
+			<!--<a href="#" class="fr shoucang sousuo"><i class="iconfont icon-kefu1"></i></a>-->
+		</header>
+		
+		<div id="container">		
+			<div id="main">
+				<div class="notice">
+					<div class="tab-hd tab-hdfore">
+						<ul class="tab-nav">
+						  <li>出售中</li>
+						  <li>已下架</li>
+						  <li>分类</li>
+						  <li>添加商品</li>
+						</ul>
+					</div>
+					<div class="tab-bd" style="background: #FFFFFF;">
+						<!--出售中-->
+						<div class="tab-pal">
+							<div class="chushouzhong">
+								<ul>
+									<li>
+										<a href="productxq-1.html">
+										<div class="chushouzhong-img">
+											<img src="images/weidian1.png" />
+										</div>
+										<div class="chushouzhong-con">
+											<p class="chushouzhong-con-p1">韩国代购正品</p>
+											<p class="chushouzhong-con-p2">￥558</p>
+											<p class="chushouzhong-con-p3"><span>销量  &nbsp;0</span><span>收藏 &nbsp; 0</span></p>
+											<p class="chushouzhong-con-p3"><span>库存  &nbsp;10</span><span>添加 &nbsp; 2016/12/02</span></p>
+										</div>
+										</a>
+										<div class="clear"></div>
+									</li>
+									<li>
+										<a href="productxq-1.html">
+										<div class="chushouzhong-img">
+											<img src="images/weidian1.png" />
+										</div>
+										<div class="chushouzhong-con">
+											<p class="chushouzhong-con-p1">韩国代购正品</p>
+											<p class="chushouzhong-con-p2">￥558</p>
+											<p class="chushouzhong-con-p3"><span>销量  &nbsp;0</span><span>收藏 &nbsp; 0</span></p>
+											<p class="chushouzhong-con-p3"><span>库存  &nbsp;10</span><span>添加 &nbsp; 2016/12/02</span></p>
+										</div>
+										</a>
+										<div class="clear"></div>
+									</li>
+								</ul>
+							</div>
+							
+							<!--<div class="chushouing">
+								<ul>
+									<li >
+										<a class="chushouing-img">
+											<img src="images/weidian1.png"/>
+											<p>韩国代购正品毛rthhyhbrttjhntr</p>
+											<p class="fl">￥88</p>
+											<a href="" class="fr xiajia">下架</a>
+										</a>
+									</li>
+									<li>
+										<a class="chushouing-img">
+											<img src="images/weidian1.png"/>
+											<p>韩国代购正品毛rthhyhbrttjhntr</p>
+											<p class="fl">￥88</p>
+											<a href="" class="fr xiajia">下架</a>
+										</a>
+									</li>
+									<li>
+										<a class="chushouing-img">
+											<img src="images/weidian1.png"/>
+											<p>韩国代购正品毛rthhyhbrttjhntr</p>
+											<p class="fl">￥88</p>
+											<a href="" class="fr xiajia">下架</a>
+										</a>
+									</li>
+									<li>
+										<a class="chushouing-img">
+											<img src="images/weidian1.png"/>
+											<p>韩国代购正品毛rthhyhbrttjhntr</p>
+											<p class="fl">￥88</p>
+											<a href="" class="fr xiajia">下架</a>
+										</a>
+									</li>
+									<div class="clear"></div>
+								</ul>
+							</div>
+						-->
+						</div>
+						<!--已下架-->
+						<div class="tab-pal">
+							<div class="chushouing">
+								<ul>
+									<li>
+										<a href="productxq-1.html" class="chushouing-img">
+											<img src="images/weidian1.png"/>
+											<p>韩国代购正品毛rthhyhbrttjhntr</p>
+											<p class="fl">￥88</p>
+											<a href="" class="fr xiajia">上架</a>
+										</a>
+									</li>
+									<li>
+										<a href="productxq-1.html" class="chushouing-img">
+											<img src="images/weidian1.png"/>
+											<p>韩国代购正品毛rthhyhbrttjhntr</p>
+											<p class="fl">￥88</p>
+											<a href="" class="fr xiajia">上架</a>
+										</a>
+									</li>
+									<li>
+										<a href="productxq-1.html" class="chushouing-img">
+											<img src="images/weidian1.png"/>
+											<p>韩国代购正品毛rthhyhbrttjhntr</p>
+											<p class="fl">￥88</p>
+											<a href="" class="fr xiajia">上架</a>
+										</a>
+									</li>
+									<li>
+										<a href="productxq-1.html" class="chushouing-img">
+											<img src="images/weidian1.png"/>
+											<p>韩国代购正品毛rthhyhbrttjhntr</p>
+											<p class="fl">￥88</p>
+											<a href="" class="fr xiajia">上架</a>
+										</a>
+									</li>
+									<div class="clear"></div>
+								</ul>
+							</div>
+						</div>	
+						<!--分类-->
+						<div class="tab-pal">
+							<ul class="fenleiul">
+								<li>
+									<a href="shangpinsystem-1.html">
+										<div class="fl">
+											<p class="fenleiul-p1">美食</p>
+											<p class="fenleiul-p2">共3件商品</p>
+										</div>
+									</a>
+									<p class="fenleiul-p3">
+										<span class="bianji-img">
+											<img src="images/bianji.png"/>
+										</span>
+										<span class="shuxian-img">
+											<img src="images/DPI-shuxian.png"/>
+										</span>
+										<span class="delect-img">
+											<img src="images/delect.png"/>
+										</span>
+									</p>
+									<div class="clear"></div>
+								</li>
+								<li>
+									<a href="shangpinsystem-1.html">
+										<div class="fl shangpin">
+											<p class="fenleiul-p1">热销</p>
+											<p class="fenleiul-p2">共3件商品</p>
+										</div>
+									</a>
+									<p class="fenleiul-p3">
+										<span class="bianji-img">
+											<img src="images/bianji.png"/>
+										</span>
+										<span class="shuxian-img">
+											<img src="images/DPI-shuxian.png"/>
+										</span>
+										<span class="delect-img">
+											<img src="images/delect.png"/>
+										</span>
+									</p>
+									<div class="clear"></div>
+								</li>
+								<li>
+									<a href="shangpinsystem-1.html">
+										<div class="fl">
+											<p class="fenleiul-p1">套餐</p>
+											<p class="fenleiul-p2">共3件商品</p>
+										</div>
+									</a>
+									
+									<p class="fenleiul-p3">
+										<span class="bianji-img">
+											<img src="images/bianji.png"/>
+										</span>
+										<span class="shuxian-img">
+											<img src="images/DPI-shuxian.png"/>
+										</span>
+										<span class="delect-img">
+											<img src="images/delect.png"/>
+										</span>
+									</p>
+									<div class="clear"></div>
+								</li>
+							</ul>
+							
+							<div class="add-fenleibtn" id="finish1">
+								<p style="border-right: 1px solid #D3D3D3;">
+									<span class="addbtn1 demo-2">新增分类</span>
+								</p>
+								<p>
+									<span class="addbtn1 bianjibtn">编辑分类</span>
+								</p>
+							</div>
+							<div class="add-fenleibtn lh20" id="finishbtn" style="display: none;">
+								完成
+							</div>
+							<script type="text/javascript">
+								$(function(){
+									$('.demo-2').click(function(){
+									  $.gDialog.prompt("新建分类名称", "", {
+									    title: "Prompt Dialog Box",
+									    required: true,
+										animateIn : "rollIn",
+									    animateOut: "rollOut"
+									  });
+									}); 
+								})
+							</script>
+							<script src="js/jquery.gDialog.js"></script>
+							
+						</div>
+						<!--添加商品-->
+						<div class="tab-pal addguige">
+							<p class="addyingye spst">商品图片</p>
+		    				<div class="upload_photo">      	
+						      	<div id="demo" class="demo"></div>
+						    </div>
+						    <p class="addyingye spst">添加描述</p>
+						    <div class="add-miaoshu">
+						    	<textarea name="" rows="" cols="" placeholder="请输入产品描述"></textarea>
+						    </div>
+						    <div class="apply clearfloat">
+						    	<div class="bottom clearfloat">
+					    			<ul>
+					    				<li>
+					    					<div class="box-s clearfloat">
+					    						<p>价格：</p>
+					    						<input type="text" id="" value="" placeholder="" />
+					    					</div>	    					
+					    				</li>
+					    				<li>
+					    					<div class="box-s clearfloat">
+					    						<p>库存：</p>
+					    						<input type="text" id="" value="" placeholder="" />
+					    					</div>	    					
+					    				</li>
+					    				<li>
+					    					<div class="box-s clearfloat">
+					    						<p>商品型号：</p>
+					    						<input type="text" id="" value="" placeholder="" />
+					    					</div>	    					
+					    				</li>
+					    			</ul>
+					    		</div>
+					    	</div>
+					    	<div class="apply clearfloat jia-add" style="display: none;">
+						    	<div class="bottom clearfloat">
+					    			<ul>
+					    				<li>
+					    					<div class="box-s clearfloat">
+					    						<p>价格：</p>
+					    						<input type="text" id="" value="" placeholder="" />
+					    					</div>	    					
+					    				</li>
+					    				<li>
+					    					<div class="box-s clearfloat">
+					    						<p>库存：</p>
+					    						<input type="text" id="" value="" placeholder="" />
+					    					</div>	    					
+					    				</li>
+					    				<li>
+					    					<div class="box-s clearfloat">
+					    						<p>商品型号：</p>
+					    						<input type="text" id="" value="" placeholder="" />
+					    					</div>	    					
+					    				</li>
+					    			</ul>
+					    		</div>
+					    	</div>
+					    	<p class="addul"><img src="images/addul.png" /></p>			
+					    	<div class="apply clearfloat">
+						    	<div class="bottom clearfloat">
+					    			<ul>	
+					    				<li>
+					    					<div class="box-s clearfloat">
+					    						<p>分类至：</p>
+					    						<select class="dianpufenlei">
+					    							<option value="0">&nbsp;</option>
+					    							<option value="0">美食</option>
+					    							<option value="0">外卖</option>
+					    							<option value="0">购物专卖</option>
+					    							<option value="0">微商代沟</option>
+					    							<option value="0">超市商店</option>
+					    							<option value="0">丽人健身</option>
+					    							<option value="0">休闲娱乐</option>
+					    							<option value="0">母婴服务</option>
+					    							<option value="0">咖啡茶点</option>
+					    							<option value="0">酒店宾馆</option>
+					    							<option value="0">生活服务</option>
+					    							<option value="0">教育培训</option>
+					    							<option value="0">家装装饰</option>
+					    							<option value="0">汽车养护</option>
+					    							<option value="0">房产楼房</option>
+					    						</select>
+					    					</div>	    					
+			    						</li>
+					    			</ul>
+				    			</div>
+			    				<a href="center.html" class="center-btn db ra3">提交</a>
+						    </div>
+						
+						</div>
+					</div>
+				</div>								
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery.SuperSlide.2.1.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		jQuery(".notice").slide({ titCell:".tab-hd li", mainCell:".tab-bd",delayTime:0 });
+	</script>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>个人主页</title>
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-touch-fullscreen" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="format-detection" content="address=no">
+		<link rel="stylesheet" type="text/css" href="css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/otherpagecontent.css"/>
+		<script src="js/jquery.min.js"  type="text/javascript"></script>
+		
+		<script type="text/javascript">
+		$(function(){
+			$("#list1").click(function(){
+				$(this).addClass("mCurr").siblings().removeClass("mCurr");
+				$("#divBuyRecord").show();
+				$("#divGetGoods").hide();
+				$("#divSingle").hide();
+			});
+			$("#list2").click(function(){
+				$(this).addClass("mCurr").siblings().removeClass("mCurr");
+				$("#divBuyRecord").hide();
+				$("#divGetGoods").show();
+				$("#divSingle").hide();
+			});
+			$("#list3").click(function(){
+				$(this).addClass("mCurr").siblings().removeClass("mCurr");
+				$("#divBuyRecord").hide();
+				$("#divGetGoods").hide();
+				$("#divSingle").show();
+			});
+			});
+		</script>
+	</head>
+	<body>
+		<header class="hasManyCity hasManyCitytwo" id="header">
+			<a href="javascript:history.go(-1)" class="fl fanhui"><i class="iconfont icon-fanhui"></i></a>
+			<div class="header-tit">
+				个人主页
+			</div>		
+		</header>
+		<section style="margin: 50px 0;">
+            <div class="mainCon">
+                <div class="mBanner">
+                    <ul>
+                        <li class="mUserHead">
+                        	<img src="images/20160822155218592.jpg">
+                        </li>
+                        <li class="mUserInfo">
+                        	<p>1989</p><br>
+                        	<span>牛豆：84</span><br>
+                        	<span style="margin-right: 20px;">经验值：84 </span><span>夺购新手</span>
+                        </li>
+                    </ul>
+                </div>
+               <div> 
+	                <div class="g-snav" id="divMidNav">
+	                    <span class="g-snav-lst mCurr" id="list1"><a href="javascript:;">云购记录</a></span>
+	                    <span class="g-snav-lst" id="list2"><a href="javascript:;">获得的商品</a></span>
+	                    <span class="g-snav-lst" id="list3"><a href="javascript:;">晒单</a></span>
+	                </div>
+	                <div>
+		                <!--云购记录-->
+		                <div id="divBuyRecord" class="mBuyRecord" style="display: block;">
+			                <ul onclick="location.href='indiana-detail-2.html'">
+			                	<li class="mBuyRecordL"><img src="images/20150422141022559.jpg"></li>
+			                	<li class="mBuyRecordR">(第260237期)金龙鱼 优质东北大米 5kg
+			                		<div class="pRate">
+			                			<div class="Progress-bar">
+			                				<p class="u-progress" title="已完成100%">
+			                					<span class="pgbar" style="width: 100%;">
+			                					    <span class="pging"></span>
+			                					</span>
+			                				</p>
+			                				<ul class="Pro-bar-li">
+			                					<li class="P-bar01"><em>42</em>已参与</li>
+			                					<li class="P-bar02"><em>42</em>总需人次</li>
+			                					<li class="P-bar03"><em>0</em>剩余</li>
+			                					<!--<div style="clear: both;"></div>-->
+			                				</ul>
+			                			</div>
+			                		</div>
+			                	</li>
+			                	
+			                </ul>
+			                <ul onclick="location.href='indiana-detail-2.html'">
+			                	<li class="mBuyRecordL"><img src="images/20150422141022559.jpg"></li>
+			                	<li class="mBuyRecordR">(第260237期)金龙鱼 优质东北大米 5kg
+			                		<div class="pRate">
+			                			<div class="Progress-bar">
+			                				<p class="u-progress" title="已完成100%">
+			                					<span class="pgbar" style="width: 100%;">
+			                					    <span class="pging"></span>
+			                					</span>
+			                				</p>
+			                				<ul class="Pro-bar-li">
+			                					<li class="P-bar01"><em>42</em>已参与</li>
+			                					<li class="P-bar02"><em>42</em>总需人次</li>
+			                					<li class="P-bar03"><em>0</em>剩余</li>
+			                				</ul>
+			                			</div>
+			                		</div>
+			                	</li>
+			                </ul>
+			                <ul onclick="location.href='indiana-detail-2.html'">
+			                	<li class="mBuyRecordL"><img src="images/20150422141022559.jpg"></li>
+			                	<li class="mBuyRecordR">(第260237期)金龙鱼 优质东北大米 5kg
+			                		<div class="pRate">
+			                			<div class="Progress-bar">
+			                				<p class="u-progress" title="已完成100%">
+			                					<span class="pgbar" style="width: 100%;">
+			                					    <span class="pging"></span>
+			                					</span>
+			                				</p>
+			                				<ul class="Pro-bar-li">
+			                					<li class="P-bar01"><em>42</em>已参与</li>
+			                					<li class="P-bar02"><em>42</em>总需人次</li>
+			                					<li class="P-bar03"><em>0</em>剩余</li>
+			                				</ul>
+			                			</div>
+			                		</div>
+			                	</li>
+			                </ul>
+			               <ul onclick="location.href='indiana-detail-2.html'">
+			                	<li class="mBuyRecordL"><img src="images/20150422141022559.jpg"></li>
+			                	<li class="mBuyRecordR">(第260237期)金龙鱼 优质东北大米 5kg
+			                		<div class="pRate">
+			                			<div class="Progress-bar">
+			                				<p class="u-progress" title="已完成100%">
+			                					<span class="pgbar" style="width: 100%;">
+			                					    <span class="pging"></span>
+			                					</span>
+			                				</p>
+			                				<ul class="Pro-bar-li">
+			                					<li class="P-bar01"><em>42</em>已参与</li>
+			                					<li class="P-bar02"><em>42</em>总需人次</li>
+			                					<li class="P-bar03"><em>0</em>剩余</li>
+			                				</ul>
+			                			</div>
+			                		</div>
+			                	</li>
+			                </ul>
+			                <ul onclick="location.href='indiana-detail-2.html'">
+			                	<li class="mBuyRecordL"><img src="images/20150422141022559.jpg"></li>
+			                	<li class="mBuyRecordR">(第260237期)金龙鱼 优质东北大米 5kg
+			                		<div class="pRate">
+			                			<div class="Progress-bar">
+			                				<p class="u-progress" title="已完成100%">
+			                					<span class="pgbar" style="width: 100%;">
+			                					    <span class="pging"></span>
+			                					</span>
+			                				</p>
+			                				<ul class="Pro-bar-li">
+			                					<li class="P-bar01"><em>42</em>已参与</li>
+			                					<li class="P-bar02"><em>42</em>总需人次</li>
+			                					<li class="P-bar03"><em>0</em>剩余</li>
+			                				</ul>
+			                			</div>
+			                		</div>
+			                	</li>
+			                </ul>
+		                </div>
+		                <!--获得商品-->
+		                <div id="divGetGoods" class="mBuyRecord" style="display: none;">
+			                <ul onclick="location.href='indiana-detail-2.html'" class="BuyRecordList">
+			                	<li class="mBuyRecordL"><img src="images/20161115084255379.jpg"></li>
+			                	<li class="mBuyRecordR">(第59567期)七匹狼 男士
+			                		<p class="mValue">价值：￥59.00</p>
+			                		<span>幸运云购码：<em class="orange">10000039</em><br>揭晓时间：2016-11-26 15:33:31.084 </span>
+			                		</li>
+			                </ul>
+			                <ul onclick="location.href='indiana-detail-2.html'" class="BuyRecordList">
+			                	<li class="mBuyRecordL"><img src="images/20161115084255379.jpg"></li>
+			                	<li class="mBuyRecordR">(第59567期)七匹狼 男士内裤 莫代尔薄款中腰四角裤 4条盒装
+			                		<p class="mValue">价值：￥59.00</p>
+			                		<span>幸运云购码：<em class="orange">10000039</em><br>揭晓时间：2016-11-26 15:33:31.084 </span>
+			                		</li>
+			                </ul>
+			                <ul onclick="location.href='indiana-detail-2.html'" class="BuyRecordList">
+			                	<li class="mBuyRecordL"><img src="images/20161115084255379.jpg"></li>
+			                	<li class="mBuyRecordR">(第59567期)七匹狼 男士内裤 莫代尔薄款中腰四角裤 4条盒装
+			                		<p class="mValue">价值：￥59.00</p>
+			                		<span>幸运云购码：<em class="orange">10000039</em><br>揭晓时间：2016-11-26 15:33:31.084 </span>
+			                		</li>
+			                </ul>
+			                <ul onclick="location.href='indiana-detail-2.html'" class="BuyRecordList">
+			                	<li class="mBuyRecordL"><img src="images/20161115084255379.jpg"></li>
+			                	<li class="mBuyRecordR">(第59567期)七匹狼 男士内裤 莫代尔薄款中腰四角裤 4条盒装
+			                		<p class="mValue">价值：￥59.00</p>
+			                		<span>幸运云购码：<em class="orange">10000039</em><br>揭晓时间：2016-11-26 15:33:31.084 </span>
+			                		</li>
+			                </ul>
+			                <ul onclick="location.href='indiana-detail-2.html'" class="BuyRecordList">
+			                	<li class="mBuyRecordL"><img src="images/20161115084255379.jpg"></li>
+			                	<li class="mBuyRecordR">(第59567期)七匹狼 男士内裤 莫代尔薄款中腰四角裤 4条盒装
+			                		<p class="mValue">价值：￥59.00</p>
+			                		<span>幸运云购码：<em class="orange">10000039</em><br>揭晓时间：2016-11-26 15:33:31.084 </span>
+			                		</li>
+			                </ul>
+			                <ul onclick="location.href='indiana-detail-2.html'" class="BuyRecordList">
+			                	<li class="mBuyRecordL"><img src="images/20161115084255379.jpg"></li>
+			                	<li class="mBuyRecordR">(第59567期)七匹狼 男士内裤 莫代尔薄款中腰四角裤 4条盒装
+			                		<p class="mValue">价值：￥59.00</p>
+			                		<span>幸运云购码：<em class="orange">10000039</em><br>揭晓时间：2016-11-26 15:33:31.084 </span>
+			                		</li>
+			                </ul>
+			                <ul onclick="location.href='indiana-detail-2.html'" class="BuyRecordList">
+			                	<li class="mBuyRecordL"><img src="images/20161115084255379.jpg"></li>
+			                	<li class="mBuyRecordR">(第59567期)七匹狼 男士内裤 莫代尔薄款中腰四角裤 4条盒装
+			                		<p class="mValue">价值：￥59.00</p>
+			                		<span>幸运云购码：<em class="orange">10000039</em><br>揭晓时间：2016-11-26 15:33:31.084 </span>
+			                		</li>
+			                </ul>
+		                </div>
+		                <!--晒单-->
+		                <div id="divSingle" class="mSingle" style="display:none;">
+		                	
+		                    <ul>
+		                    	<li>
+		                    		<a href="sdxq-1.html">
+		                    			<h3>
+		                    				<b>中国的好酒</b>
+		                    				<em>36分钟前</em>
+		                    			</h3>
+		                    			<p>刚收到奖品，外面还下着雨呢，快递员真的很辛苦。感谢云购，这几天的运气很不错，继前几天中苹果7就一直好运不断，买什么都会有意外的惊喜，实在是太兴奋了。说...</p>
+		                    			<dl>
+		                    				<img src="images/20160822175122286.jpg">
+		                    				<img src="images/20160822175122286.jpg">
+		                    				<img src="images/20160822175122286.jpg">
+		                    			</dl>
+		                    		</a>
+		                    	</li>
+		                    	<li>
+		                    		<a href="sdxq-1.html">
+		                    			<h3>
+		                    				<b>中国的好酒</b>
+		                    				<em>36分钟前</em>
+		                    			</h3>
+		                    			<p>刚收到奖品，外面还下着雨呢，快递员真的很辛苦。感谢云购，这几天的运气很不错，继前几天中苹果7就一直好运不断，买什么都会有意外的惊喜，实在是太兴奋了。说...</p>
+		                    			<dl>
+		                    				<img src="images/20160822175122286.jpg">
+		                    				<img src="images/20160822175122286.jpg">
+		                    				<img src="images/20160822175122286.jpg">
+		                    			</dl>
+		                    		</a>
+		                    	</li>
+		                    	<li>
+		                    		<a href="sdxq-1.html">
+		                    			<h3>
+		                    				<b>中国的好酒</b>
+		                    				<em>36分钟前</em>
+		                    			</h3>
+		                    			<p>刚收到奖品，外面还下着雨呢，快递员真的很辛苦。感谢云购，这几天的运气很不错，继前几天中苹果7就一直好运不断，买什么都会有意外的惊喜，实在是太兴奋了。说...</p>
+		                    			<dl>
+		                    				<img src="images/20160822175122286.jpg">
+		                    				<img src="images/20160822175122286.jpg">
+		                    				<img src="images/20160822175122286.jpg">
+		                    			</dl>
+		                    		</a>
+		                    	</li>
+		                    	<li>
+		                    		<a href="sdxq-1.html">
+		                    			<h3>
+		                    				<b>中国的好酒</b>
+		                    				<em>36分钟前</em>
+		                    			</h3>
+		                    			<p>刚收到奖品，外面还下着雨呢，快递员真的很辛苦。感谢云购，这几天的运气很不错，继前几天中苹果7就一直好运不断，买什么都会有意外的惊喜，实在是太兴奋了。说...</p>
+		                    			<dl>
+		                    				<img src="images/20160822175122286.jpg">
+		                    				<img src="images/20160822175122286.jpg">
+		                    				<img src="images/20160822175122286.jpg">
+		                    			</dl>
+		                    		</a>
+		                    	</li>
+		                    </ul>
+		                    	
+		                </div>
+	                </div>
+                
+	            </div>
+            </div>
+        </section>
+		
+		
+	</body>
+</html>

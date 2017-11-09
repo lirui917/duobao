@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>商家入驻</title>
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-touch-fullscreen" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="format-detection" content="address=no">
+		<link rel="stylesheet" type="text/css" href="css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<link rel="stylesheet" type="text/css" href="css/otherpagecontent.css"/>
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script src="js/hmt.js" type="text/javascript"></script>
+		<!-- 引用控制层插件样式 -->
+		<link rel="stylesheet" href="picture-shangchuan/control/css/ph-zyUpload.css" type="text/css">
+		<!--<script src="http://www.lanrenzhijia.com/ajaxjs/jquery.min.js"></script>-->
+		<!-- 引用核心层插件 -->
+		<script src="picture-shangchuan/core/zyFile.js"></script>
+		<!-- 引用控制层插件 -->
+		<script src="picture-shangchuan/control/js/ph-zyUpload.js"></script>
+		<!-- 引用初始化JS -->
+		<script src="picture-shangchuan/core/ph-lanrenzhijia.js"></script>
+		<script type="text/javascript">
+			var xmldom = null;
+			function show_province(){
+				$.get('js/ChinaArea.xml',function(msg){
+					xmldom = msg;
+					$(msg).find('province').each(function(k,v){
+						var nm = $(this).attr('province');
+						var id = $(this).attr('provinceID');
+						$('#province').append("<option value='"+id+"'>"+nm+"</option>");
+					})
+				},'xml')
+			}
+			$(function(){
+				show_province();
+			});
+			function show_city(){
+				var pid = $('#province option:selected').val();
+				var two_pid = pid.substr(0,2);
+//				console.log($(xmldom).find('City[CityID^='+two_pid+']'));
+				$('#city').empty();
+				$('#city').append('<option value="0">--请选择--</option>')
+				
+				$(xmldom).find('City[CityID^='+two_pid+']').each(function(k,v){
+					var nm = $(this).attr('City');
+					var id = $(this).attr('CityID');
+					$('#city').append("<option value='"+id+"'>"+nm+"</option>");
+				})
+			};
+			function show_area(){
+				var pid = $('#city option:selected').val();
+				var two_pid = pid.substr(0,4);
+				$('#area').empty();
+				$('#area').append('<option value="0">--请选择--</option>')
+				
+				$(xmldom).find('Piecearea[PieceareaID^='+two_pid+']').each(function(k,v){
+					var nm = $(this).attr('Piecearea');
+					var id = $(this).attr('PieceareaID');
+					$('#area').append("<option value='"+id+"'>"+nm+"</option>");
+				})
+			};
+		</script>
+		
+	</head>
+	<body>
+		<header class="hasManyCity hasManyCitytwo" id="header">
+			<a href="javascript:history.go(-1)" class="fl fanhui"><i class="iconfont icon-fanhui"></i></a>
+			<div class="header-tit">
+				商家入驻
+			</div>		
+		</header>
+		<div id="container">		
+			<div id="main">
+			    <div class="warp warpthree clearfloat">
+			    	<div class="h-top h-toptwo clearfloat box-s">
+			    		<p class="tu"><img src="img/touxiang.png"/></p>
+			    		<p class="nr">王小王</p>
+			    	</div>
+			    	<div class="apply clearfloat">
+			    		<div class="top clearfloat">
+			    			<ul>
+			    				<!--<li class="fl ra3">
+			    					
+			    					<i class="iconfont icon-jiahao1"></i>
+			    					<p>添加营业执照</p>
+			    				</li>
+			    				<li class="fr ra3">
+			    					<i class="iconfont icon-jiahao1"></i>
+			    					<p>法人身份证</p>
+			    				</li>-->
+			    				<p class="addyingye">添加营业执照和身份证照片和店铺照片</p>
+			    				<div class="upload_photo">      	
+							      	<div id="demo" class="demo"></div>
+							    </div>
+			    			</ul>
+			    		</div>
+			    		<div class="bottom clearfloat">
+			    			<ul>
+			    				<li>
+			    					<div class="box-s clearfloat">
+			    						<p>商家名称：</p>
+			    						<input type="text" id="" value="" placeholder="" />
+			    					</div>	    					
+			    				</li>
+			    				<li>
+			    					<div class="box-s clearfloat">
+			    						<p>店铺分类：</p>
+			    						<!--<input type="text" id="" value="" placeholder="" />-->
+			    						<select class="dianpufenlei">
+			    							<option value="0">&nbsp;</option>
+			    							<option value="0">美食</option>
+			    							<option value="0">外卖</option>
+			    							<option value="0">购物专卖</option>
+			    							<option value="0">微商代沟</option>
+			    							<option value="0">超市商店</option>
+			    							<option value="0">丽人健身</option>
+			    							<option value="0">休闲娱乐</option>
+			    							<option value="0">母婴服务</option>
+			    							<option value="0">咖啡茶点</option>
+			    							<option value="0">酒店宾馆</option>
+			    							<option value="0">生活服务</option>
+			    							<option value="0">教育培训</option>
+			    							<option value="0">家装装饰</option>
+			    							<option value="0">汽车养护</option>
+			    							<option value="0">房产楼房</option>
+			    						</select>
+			    					</div>	    					
+			    				</li>
+			    				<li>
+			    					<div class="box-s clearfloat">
+			    						<p>店铺位置：</p>
+			    						<!--<input type="text" id="" value="" placeholder="" />-->
+			    						<div class="sanji-right">
+			    							<select id="province" onchange="show_city()">
+												<option value="0">--请选择--</option>
+											</select>
+											<select id="city" onchange="show_area()">
+												<option value="0">--请选择--</option>
+											</select>
+											<select id="area">
+												<option value="0">--请选择--</option>
+											</select>
+			    						</div>
+			    					</div>	    					
+			    				</li>
+			    				<li>
+			    					<div class="box-s clearfloat">
+			    						<p>详细地址：</p>
+			    						<input type="text" id="" value="" placeholder="" />
+			    					</div>	    					
+			    				</li>
+			    				<!--<li>
+			    					<div class="box-s clearfloat">
+			    						<p>所属行业：</p>
+			    						<input type="text" id="" value="" placeholder="" />
+			    					</div>	    					
+			    				</li>-->
+			    				<li>
+			    					<div class="box-s clearfloat">
+			    						<p>身份证号：</p>
+			    						<input type="text" id="" value="" placeholder="" />
+			    					</div>	    					
+			    				</li>
+			    				<li>
+			    					<div class="box-s clearfloat">
+			    						<p>QQ：</p>
+			    						<input type="text" id="" value="" placeholder="" />
+			    					</div>	    					
+			    				</li>
+			    				<li>
+			    					<div class="box-s clearfloat">
+			    						<p>邮箱地址：</p>
+			    						<input type="text" id="" value="" placeholder="" />
+			    					</div>	    					
+			    				</li>
+			    				<li>
+			    					<div class="box-s clearfloat">
+			    						<p>联系电话：</p>
+			    						<input type="text" id="" value="" placeholder="" />
+			    					</div>	    					
+			    				</li>
+			    				<!--<li>
+			    					<div class="box-s clearfloat">
+			    						<p>经验种类：</p>
+			    						<input type="text" id="" value="" placeholder="" />
+			    					</div>	    					
+			    				</li>
+			    				<li>
+			    					<div class="box-s clearfloat">
+			    						<p>商家描述：</p>
+			    						<input type="text" id="" value="" placeholder="" />
+			    					</div>	    					
+			    				</li>-->
+			    			</ul>
+			    		</div>
+			    		<a href="center.html" class="center-btn db ra3">提交</a>
+			    	</div>    	
+			    </div>
+			</div>
+		</div>
+	
+	
+	</body>
+</html>

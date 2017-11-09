@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width">
+    <title>分享赚钱</title>
+    <link rel="stylesheet" type="text/css" href="css/member.css"/>
+    <link rel="stylesheet" type="text/css" href="css/sharemoney.css"/>
+    <link rel="stylesheet" type="text/css" href="css/footer.css"/>
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    <script src="js/jquery.min.js"></script>
+</head>
+<body style="zoom: 1;">
+	
+	<header class="hasManyCity hasManyCitytwo" id="header">
+			<a href="javascript:history.go(-1)" class="fl fanhui"><i class="iconfont icon-fanhui"></i></a>
+			<div class="header-tit">
+				分享赚钱
+			</div>		
+		</header>
+	
+	
+	
+<div id="loadingPicBlock">
+    <div class="wrapper m_share">
+        <div class="shareCon">
+            <div class="m_banner"></div>
+            <dl>
+                 <dt><a href="about.html" style="color:#F00; font-weight:bold;">什么是一元夺购？</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="index.html" style="color:#F00; font-weight:bold;">立即参与夺购</a><br><br>经您邀请的好友，成功参与夺宝后，您可获得一级用户消费额5%的佣金奖励，获得二级用户消费额2%的佣金奖励，获得三级用户消费额1%</dt>
+                    <dd><a id="btnShare" href="javascript:;" class="nextBtn orgBtn">立即赚钱</a></dd><div style="display:none;">2015.12.25</div>
+           <dd><a href="yj.html">1级佣金明细</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="yj-1.html">2级佣金明细</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="yj-2.html">3级佣金明细</a></dd>
+                
+          </dl>
+        </div>
+        
+        <div class="sub_nav marginB">
+            
+	   <a href="tx.html">您已合计赚取佣金：<strong style="font-size:16px; color:#F00; font-weight:bold;">0</strong>&nbsp;元&nbsp;&nbsp;<em class="orange">立即提现</em><i></i></a>
+     
+		
+        </div>
+        <!--弹出-->
+        <div class="m_popUp" id="m_popUp" style="display: none;">
+            <div class="m_guide">
+                <span></span>
+                <div class="m_how">
+                    <h4>怎么赚钱？</h4>
+                    <p>1: 点击本页面右上角的三个点的图标</p>
+                    <p>2: 选择[发送给朋友]或[分享到朋友圈]</p>
+                    <p>3: 经您邀请的好友，成功参与夺宝后，您可获得一级用户消费额5%的佣金奖励，获得二级用户消费额2%的佣金奖励，获得三级用户消费额1%</p>
+                </div>
+            </div>
+        </div>
+<script>
+$("#btnShare").click(function(){
+$("#m_popUp").show();
+$("#header").hide();
+})
+$("#m_popUp").click(function(){
+$(this).hide();
+$("#header").show();
+})
+</script>
+         <div class="R-content">
+		 		 <!--
+            <div class="member-t"><h2>非微信邀请链接</h2></div>
+  
+            <div id="divInvited" class="success-invitation gray02"  >
+                <p>1元就能购买iphone6s哦，快去看看吧！ /mobile/mobile/item/125/1518/477/5</p>
+                <span><input id="txtInfo"  style="width:80%;height:20px; " disabled="disabled" value="长按上面内容复制" onpaste="return false" type="text"><span id="d_clip_container"></span></span>
+
+            </div>
+-->
+       <div id="divInviteInfo" class="get-tips gray01" style="">成功邀请 <span class="orange">0</span> 位1级会员注册，已有 <span class="orange">0</span> 位1级会员参与夺购<br>
+成功邀请 <span class="orange">0</span> 位2级会员注册，已有 <span class="orange">0</span> 位2级会员参与夺购<br>  
+成功邀请 <span class="orange">0</span> 位3级会员注册，已有 <span class="orange">0</span> 位3级会员参与夺购
+</div>
+            <div id="divList" class="list-tab SuccessCon">
+            	<ul class="listTitle">
+            		<li class="w200">一级用户</li>
+            		<li class="w200">时间</li>
+            		<li class="w200">邀请编号</li>
+            		<li class="w200">消费状态</li>
+            	</ul>
+            	<ul class="listTitle">
+            		<li class="w200">李雷</li>
+            		<li class="w200">2016-10-11</li>
+            		<li class="w200">021410</li>
+            		<li class="w200">已消费</li>
+            	</ul>
+            	<ul class="listTitle">
+            		<li class="w200">李雷</li>
+            		<li class="w200">2016-10-11</li>
+            		<li class="w200">021410</li>
+            		<li class="w200">已消费</li>
+            	</ul>
+            	<ul class="listTitle">
+            		<li class="w200">李雷</li>
+            		<li class="w200">2016-10-11</li>
+            		<li class="w200">021410</li>
+            		<li class="w200">已消费</li>
+            	</ul>
+                                                                  
+            </div>
+                                            
+
+        </div>
+
+
+        <div id="divPageNav" class="page_nav"></div>
+</div>
+
+<div class="R-content">
+         
+
+
+            <div id="divList" class="list-tab SuccessCon"><ul class="listTitle"><li class="w200">二级用户</li><li class="w200">时间</li><li class="w200">邀请编号</li><li class="w200">消费状态</li></ul>
+                                                
+                                   <div class="tips-con"><i></i>您还未有邀请谁哦</div>
+            </div>
+                         
+
+        </div>
+
+
+      
+</div>
+
+<div class="R-content">
+         
+
+
+            <div id="divList" class="list-tab SuccessCon"><ul class="listTitle"><li class="w200">三级用户</li><li class="w200">时间</li><li class="w200">邀请编号</li><li class="w200">消费状态</li></ul>
+                                  <div class="tips-con" style="padding-bottom: 50px;"><i></i>您还未有邀请谁哦</div>
+            </div>
+                                                 
+        </div>
+
+<footer id="footer">
+			<div>
+				<a href="index.html">
+					<div class="icon i-1"></div>
+					<p>首页</p>
+				</a>
+			</div>
+			<div>
+				<a href="jifen-mall.html">
+					<div class="icon i-5"></div>
+					<p>积分商城</p>
+				</a>
+			</div>
+			<div>
+				<a href="sharemoney.html">
+					<div class="icon i-2 on"></div>
+					<p>分享赚钱</p>
+				</a>
+			</div>
+			<div>
+				<a href="yydgindex.html">
+					<div class="icon i-3"></div>
+					<p>一元夺购</p>
+				</a>
+			</div>
+			<div>
+				<a href="personcenter.html">
+					<div class="icon i-4"></div>
+					<p>个人中心</p>
+				</a>
+			</div>			
+		</footer>		
+	
+
+
+
+
+
+
+
+</html>

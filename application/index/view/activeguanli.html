@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>活动管理</title>
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-touch-fullscreen" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="format-detection" content="address=no">
+		<link rel="stylesheet" type="text/css" href="css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+		<link rel="stylesheet" href="css/reset.css">
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+	</head>
+	<body>
+		<header class="hasManyCity hasManyCitytwo" id="header">
+			<a href="javascript:history.go(-1)" class="fl fanhui"><i class="iconfont icon-fanhui"></i></a>
+			<div class="header-tit">
+				活动管理
+			</div>		
+		</header>
+		<div id="container">		
+			<div id="main">
+				<div class="notice" style="margin:0 auto">
+					<div class="tab-hd tab-hdfive">
+						<ul class="tab-nav">
+						  <li>添加活动</li>
+						  <li>活动管理</li>
+						</ul>
+					</div>
+					<div class="tab-bd">
+						<div class="tab-pal">
+							<div class="apply clearfloat">
+		    		<div class="bottom clearfloat">
+		    			<ul>
+		    				<li>
+		    					<div class="box-s clearfloat">
+		    						<p>券的种类：</p>
+		    						<div class="sanji-right">
+		    							<select class="dianpufenlei" style="margin: 0;">
+			    							<option value="0">--请选择--</option>
+			    							<option value="0">电子优惠券</option>
+			    							<option value="0">减价优惠券</option>
+			    							<option value="0">礼品券</option>
+			    							<option value="0">阶梯级优惠券</option>
+			    							<option value="0">优惠券</option>
+			    						</select>
+		    						</div>
+		    					</div>	    					
+		    				</li>
+		    				<li>
+		    					<div class="box-s clearfloat">
+		    						<p>金额：</p>
+		    						<input type="text" id="" value="" placeholder="" />
+		    					</div>	    					
+		    				</li>
+		    				<li>
+		    					<div class="box-s clearfloat">
+		    						<p>折扣金额：</p>
+		    						<input type="text" id="" value="" placeholder="" />
+		    					</div>	    					
+		    				</li>
+		    				<li>
+		    					<div class="box-s clearfloat">
+		    						<p>悬赏积分：</p>
+		    						<input type="text" id="" value="" placeholder="" />
+		    					</div>	    					
+		    				</li>
+		    			</ul>
+		    		</div>
+		    		<a href="center.html" class="center-btn db ra3">提交</a>
+		    	</div>
+						</div>
+						<div class="tab-pal">
+							<div class="hdgl">
+								<ul>
+									<li class="clearfloat"><p>XX小姐使用您店里的代金券您店里的代金券您店里的代金券您店里的代金券</p><span class="red">同意</span><span class="no">拒绝</span></li>
+									<li class="clearfloat"><p>XX小姐使用您店里的代金券</p><span class="red">同意</span><span class="no">拒绝</span></li>
+									<li class="clearfloat"><p>XX小姐使用您店里的代金券</p><span class="red">同意</span><span class="no">拒绝</span></li>
+									<li class="clearfloat"><p>XX小姐使用您店里的代金券</p><span class="red">同意</span><span class="no">拒绝</span></li>
+									<li class="clearfloat"><p>XX小姐使用您店里的代金券</p><span class="red">同意</span><span class="no">拒绝</span></li>
+									<li class="clearfloat"><p>XX小姐使用您店里的代金券</p><span class="red">同意</span><span class="no">拒绝</span></li>
+									
+								</ul>
+							</div>
+						</div>	
+					</div>
+				</div>
+			</div>
+	    </div>
+	    
+	</body>
+	<script type="text/javascript" src="js/hmt.js" ></script>
+	<script src="js/jquery.SuperSlide.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			jQuery(".notice").slide({ titCell:".tab-hd li", mainCell:".tab-bd",delayTime:0 });
+		</script>
+		<script type="text/javascript">
+			$(".hdgl li span.red").click(function(){
+				$(this).text("已同意").css("background","#999");
+				$(this).next().hide();
+			});
+			$(".hdgl li span.no").click(function(){
+				$(this).text("已拒绝").css("background","#999");
+				$(this).prev().hide();
+			});
+		</script>
+</html>
