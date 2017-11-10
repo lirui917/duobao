@@ -17,12 +17,12 @@ class Common extends Controller
     {
         parent::__construct();
         //校验token
-        $this->check_token();
+        // $this->check_token();
     }
-
     //校验token
     public function check_token(){
         //接收 参数
+        // echo $_GET['appid'];die;
         $appid=isset($_GET['appid'])?$_GET['appid']:'';
         $str=isset($_GET['sign'])?$_GET['sign']:'';
         $token=isset($_GET['token'])?strtolower($_GET['token']):'';
@@ -48,7 +48,6 @@ class Common extends Controller
             $this->get_msg('102','token错误');
         }
     }
-
     //返回错误信息
     public function get_msg($error,$errormsg){
             $callback=$_GET['callback'];
@@ -56,5 +55,24 @@ class Common extends Controller
             $json_str=json_encode($data,JSON_UNESCAPED_UNICODE);
             echo $callback."(".$json_str.")";exit;
 
+    }
+    public function get_rand($proArr) { //一维数组：产生概率
+        $result = ''; 
+        //概率数组的总概率精度 
+        $proSum = array_sum($proArr); //总数为121
+        // var_dump($proSum);die;
+        //概率数组循环 
+        
+        foreach ($proArr as $key => $proCur) { //$key指的是类型
+            $randNum = mt_rand(1, $proSum); //抽取随机数
+            if ($randNum <= $proCur) { //1-121数< $v
+                $result = $key; //result=类型                       
+                break; 
+            } else { 
+                $proSum -= $proCur;                     
+            } 
+        } 
+        unset ($proArr); 
+        return $result; 
     }
 }
