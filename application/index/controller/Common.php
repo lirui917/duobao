@@ -20,7 +20,9 @@ class Common extends Controller
         $this->check_token();
     }
 
-    //校验token
+    /**
+     * 校验token
+     */
     public function check_token(){
         //接收 参数
         $appid=isset($_GET['appid'])?$_GET['appid']:'';
@@ -49,12 +51,16 @@ class Common extends Controller
         }
     }
 
-    //返回错误信息
+    /**
+     * 用户输出数据
+     * @param $error 错误码 int
+     * @param $errormsg 错误信息 string /array
+     *
+     */
     public function get_msg($error,$errormsg){
             $callback=$_GET['callback'];
             $data=['error'=>$error,'errormsg'=>$errormsg];
             $json_str=json_encode($data,JSON_UNESCAPED_UNICODE);
             echo $callback."(".$json_str.")";exit;
-
     }
 }
