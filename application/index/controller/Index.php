@@ -53,7 +53,7 @@ class Index extends Common
         }
     }
     /**
-     *
+     *获取商家详情 通过商家ID
      */
     public function getSellerInfoById(){
         if (isset($_GET['sellerid'])){
@@ -69,8 +69,18 @@ class Index extends Common
                 $data['info']=$info;
             }
             //查询首个菜单下商品
-            $menu_id=isset($_GET['menu_id'])?$_GET['menu_id']:$menus[0]['menu_id'];
-            $goods=Db::name('goods')->where(['goods_seller_id'=>$seller_id,'menu_id'=>$menu_id])->select();
+            if(!empty($menus)){
+                $menu_id=isset($_GET['menu_id'])?$_GET['menu_id']:$menus[0]['menu_id'];
+            }else{
+                $menu_id='';
+            }
+
+            if ($menu_id){
+                $goods=Db::name('goods')->where(['goods_seller_id'=>$seller_id,'menu_id'=>$menu_id])->select();
+            }else{
+                $goods=Db::name('goods')->where('goods_seller_id',$seller_id)->select();
+            }
+
 
             if ($goods) $data['goods']=$goods;
             if($menus) $data['menus']=$menus;
