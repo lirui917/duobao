@@ -15,6 +15,7 @@ class Common extends Controller
 {
     function __construct()
     {
+        header('content-type:text/html;charset=utf-8');
         parent::__construct();
         //校验token
         $this->check_token();
