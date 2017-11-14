@@ -62,7 +62,6 @@ class Common extends Controller
         $proSum = array_sum($proArr); //总数为121
         // var_dump($proSum);die;
         //概率数组循环 
-        
         foreach ($proArr as $key => $proCur) { //$key指的是类型
             $randNum = mt_rand(1, $proSum); //抽取随机数
             if ($randNum <= $proCur) { //1-121数< $v
@@ -74,5 +73,16 @@ class Common extends Controller
         } 
         unset ($proArr); 
         return $result; 
+    }
+    public function two_reset($system1){//移除二维数组中重复的数组值
+        foreach($system1 as $k=>$v){
+         $arr[$k]=$v['goods_id'];
+         }
+         $system3=array_unique($arr);
+         $key=array_keys($system3);
+         foreach($key as $v){
+            $system4[]=$system1[$v];
+         }
+         return $system4;
     }
 }
