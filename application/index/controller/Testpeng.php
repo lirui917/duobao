@@ -65,7 +65,9 @@ class Testpeng extends Common
             $this->get_msg('109','没有配置');
         }
     }
-      
-    // public function \\\\
+    public function goods_attr(){
+    $goods_id=$_GET['sign'];    
+    
+    }
     
 }
