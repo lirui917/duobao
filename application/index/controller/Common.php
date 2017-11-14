@@ -1,7 +1,7 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: 罗雄腾
+ * User: gh
  * Date: 2017/11/07
  * Time: 12:05
  *
@@ -24,7 +24,7 @@ class Common extends Controller
     public function check_token(){
         //接收 参数
         $appid=isset($_GET['appid'])?$_GET['appid']:'';
-        $str=isset($_GET['sign'])?$_GET['sign']:'';
+        $str=isset($_GET['str'])?$_GET['str']:'';
         $token=isset($_GET['token'])?strtolower($_GET['token']):'';
         $callback=isset($_GET['callback'])?strtolower($_GET['callback']):'';
 
