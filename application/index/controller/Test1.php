@@ -20,6 +20,7 @@ class Test1 extends Common
         }
 
     }
+    
     public function add(){
         echo "hello world";
         return 1223222;

@@ -15,7 +15,7 @@ return [
     // 服务器地址
     'hostname'        => '192.168.1.120',
     // 数据库名
-    'database'        => 'ecshop',
+    'database'        => 'echsop',
     // 用户名
     'username'        => 'root',
     // 密码
