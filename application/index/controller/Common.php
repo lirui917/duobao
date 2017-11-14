@@ -27,7 +27,7 @@ class Common extends Controller
     public function check_token(){
         //接收 参数
         $appid=isset($_GET['appid'])?$_GET['appid']:'';
-        $str=isset($_GET['str'])?$_GET['str']:'';
+        $str=isset($_GET['sign'])?$_GET['sign']:'';
         $token=isset($_GET['token'])?strtolower($_GET['token']):'';
         $callback=isset($_GET['callback'])?strtolower($_GET['callback']):'';
 
@@ -38,6 +38,7 @@ class Common extends Controller
         }
         //判断appid str 是否为空
         if (empty($appid)||empty($str)){
+            echo $appid,$str;
             $this->get_msg('103','参数错误');
         }
         //判断token 是否存在
