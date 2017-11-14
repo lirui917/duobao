@@ -10,7 +10,7 @@ namespace app\index\controller;
 
 use think\Controller;
 use think\Request;
-
+header("content-type:text/html;charset=utf-8");
 class Common extends Controller
 {
     function __construct()
@@ -60,9 +60,10 @@ class Common extends Controller
      *
      */
     public function get_msg($error,$errormsg){
-            $callback=$_GET['callback'];
-            $data=['error'=>$error,'errormsg'=>$errormsg];
-            $json_str=json_encode($data,JSON_UNESCAPED_UNICODE);
-            echo $callback."(".$json_str.")";exit;
+
+        $callback=$_GET['callback'];
+        $data=['error'=>$error,'errormsg'=>$errormsg];
+        $json_str=json_encode($data,JSON_UNESCAPED_UNICODE);
+        echo $callback."(".$json_str.")";exit;
     }
 }
