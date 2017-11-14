@@ -9,7 +9,7 @@ namespace app\index\controller;
 
 use think\Controller;
 use think\Request;
-
+header("content-type:text/html;charset=utf-8");
 class Common extends Controller
 {
     function __construct()
@@ -22,7 +22,7 @@ class Common extends Controller
     //校验token
     public function check_token(){
         $appid=isset($_GET['appid'])?$_GET['appid']:'';
-        $str=isset($_GET['sign'])?$_GET['sign']:'';
+        $str=isset($_GET['str'])?$_GET['str']:'';
         $token=isset($_GET['token'])?strtolower($_GET['token']):'';
 
         if (empty($appid)||empty($str)){
@@ -42,9 +42,8 @@ class Common extends Controller
 
     //返回错误信息
     public function get_msg($error,$errormsg){
-
+        $callback=$_GET['callback'];
         if(isset($callback)){
-            $callback=$_GET['callback'];
             $data=['error'=>$error,'errormsg'=>$errormsg];
             $json_str=json_encode($data);
             echo $callback."(".$json_str.")";exit;

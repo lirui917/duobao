@@ -1,0 +1,230 @@
+
+
+/* 头部底部 */
+
+footer {
+	height: 0.5rem;
+	border-top: 1px #CCC solid;
+	position: fixed;
+	bottom: 0;
+	z-index: 999;
+	background: #EEE;
+	width: 100%;
+}
+
+footer>div {
+	width: 20%;
+	float: left;
+}
+
+footer p {
+	text-align: center;
+	color: #666;
+	font-size: 0.14rem;
+	margin-top: .05rem;
+}
+
+footer .icon {
+	width: 0.20rem;
+	height: 0.20rem;
+	margin: 0 auto;
+	margin-top: 0.04rem;
+	background: url(../img/footIco.png) no-repeat center top;
+	background-size: 0.20rem auto;
+}
+
+footer .icon.on {
+	background-image: url(../img/footIco_on.png);
+}
+
+footer .i-1 {
+	background-position: center 0;
+}
+
+footer .i-2 {
+	background-position: center -0.20rem;
+}
+
+footer .i-3 {
+	background-position: center -0.40rem;
+}
+
+footer .i-4 {
+	background-position: center -0.60rem;
+}
+
+footer .i-5 {
+	background-position: center -0.80rem;
+}
+
+footer .i-6 {
+	background-position: center -1rem;
+}
+
+footer .i-7 {
+	background-position: center -1.2rem;
+}
+
+footer .i-8 {
+	background-position: center -1.4rem;
+}
+
+footer .i-9 {
+	background-position: center -1.6rem;
+}
+
+.footer-cart,
+.footer-btn {
+	background-color: #FFF;
+	line-break: 0.5rem;
+}
+
+.footer-cart .price {
+	font-size: 0.14rem;
+	color: #2fbdaa;
+	height: 0.55rem;
+	line-height: 0.5rem;
+	margin-left: 0.5rem;
+}
+
+.footer-cart .cart {
+	width: 0.32rem;
+	height: 0.32rem;
+	background: url(../img/icon-cart.png) no-repeat;
+	background-size: 0.32rem 0.3rem;
+	position: absolute;
+	top: 0.12rem;
+	left: 0.1rem;
+}
+
+.footer-cart .cart-num {
+	width: 0.18rem;
+	height: 0.18rem;
+	line-height: 0.18rem;
+	background: #EB6100;
+	border-radius: 0.5rem;
+	color: #FFF;
+	font-size: 0.12rem;
+	text-align: center;
+	position: relative;
+	bottom: 0.05rem;
+	left: 0.1rem;
+}
+
+.footer-cart .btn {
+	width: 0.9rem;
+	height: 0.33rem;
+	background: #2fbdaa;
+	float: right;
+	margin-right: 0.1rem;
+	cursor: pointer;
+	color: #FFF;
+	text-align: center;
+	font-size: 0.16rem;
+	margin-top: 0.07rem;
+	line-height: 0.33rem;
+	border-radius: 0.05rem;
+}
+
+.footer-cart .disable {
+	width: 0.9rem;
+	height: 0.33rem;
+	background: #dedede;
+	float: right;
+	margin-right: 0.1rem;
+	cursor: pointer;
+	color: #FFF;
+	text-align: center;
+	font-size: 0.16rem;
+	margin-top: 0.07rem;
+	line-height: 0.33rem;
+	border-radius: 0.05rem;
+}
+
+.footer-cart input {
+	width: 1rem;
+	height: 0.36rem;
+	background: #2fbdaa;
+	float: right;
+	margin-right: 0.1rem;
+	cursor: pointer;
+	color: #FFF;
+	text-align: center;
+	font-size: 0.16rem;
+	margin-top: 0.07rem;
+	line-height: 0.36rem;
+	border-radius: 0.05rem;
+	border: none 0px;
+}
+
+.footer-cart .btn-long {
+	width: 80%;
+	height: 0.36rem;
+	position: absolute;
+	left: 10%;
+	line-height: 0.36rem;
+	background: #2FBDAA;
+	border-radius: 0.04rem;
+	text-align: center;
+	color: #FFF;
+	font-size: 0.16rem;
+}
+
+footer #jq_total {
+	width: auto;
+}
+
+
+
+
+
+header {
+	height: 50px;
+	background-color: #ff1b0d;
+	position: fixed;
+	width: 100%;
+	z-index: 9999;
+	display: -webkit-box;
+	top:0
+}
+.fl {
+    float: left;
+}
+a, a:visited, a:hover, a:link {
+    color: #999;
+    text-decoration: none;
+    outline: 0;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.hasManyCitytwo .fanhui {
+    color: #fff;
+    margin-left: 10px;
+    line-height: 50px;
+}
+.hasManyCitytwo .fanhui i {
+    font-size: .2rem;
+}
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0;
+    -moz-osx-font-smoothing: grayscale;
+}
+.icon-fanhui:before {
+    content: "\e631";
+}
+.hasManyCitytwo .header-tit {
+    width: 68%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    margin: 0 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: .15rem;
+    color: #fff;
+    font-family: "微软雅黑";
+}
