@@ -10,6 +10,11 @@ class Active extends Common
      **/
     public function active_list(){
         $active=Db::name('favourable_activity')->where("seller_id",1)->select();
+        foreach ($active as &$v){
+            $v['start_time']=date('Y-m-d H:i:s',$v['start_time']);
+            $v['end_time']=date('Y-m-d H:i:s',$v['end_time']);
+            unset($v);
+        }
         $this->get_msg(100,$active);
     }
     public function active_add(){

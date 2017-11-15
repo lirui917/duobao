@@ -38,7 +38,6 @@ class Common extends Controller
         }
         //判断appid str 是否为空
         if (empty($appid)||empty($str)){
-            echo $appid,$str;
             $this->get_msg('103','参数错误');
         }
         //判断token 是否存在

@@ -145,14 +145,7 @@ class Index extends Common
         $data=Db::table('ecs_seller')->where('seller_type',17)->limit(6)->select();
         echo $_GET['callback'].'('.json_encode($data).')';
     }
-    //查询商家所属商品
-    public function remen_details(){
-        $data['goods']=Db::table('ecs_goods')->where("goods_seller_id",$_GET['id'])->select();
-        $data['seller']=Db::table('ecs_seller')->where("seller_id",$_GET['id'])->find();
-        $data['seller']['seller_starttime']=date('H:i',strtotime(date('Y-m-d'))+$data['seller']['seller_starttime']);
-        $data['seller']['seller_endtime']=date('H:i',strtotime(date('Y-m-d'))+$data['seller']['seller_endtime']);
-        echo $_GET['callback'].'('.json_encode($data).')';
-    }
+
     //商品信息
     public function general(){
         $data['goods']=Db::table('ecs_goods')->where("goods_id",$_GET['id'])->find();
